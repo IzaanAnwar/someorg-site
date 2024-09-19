@@ -61,10 +61,10 @@ export default function LatestBlogPosts() {
           Latest Insights in <strong className="text-primary">Cybersecurity</strong>
         </h2>
         <p className="text-gray-600 mb-12 max-w-5xl mx-auto text-center">
-          Experience unmatched security with our groundbreaking 8-step approach. Our advanced
-          techniques and innovative solutions provide unparalleled protection against emerging
-          threats and vulnerabilities, taking security to new heights. Revolutionize your security
-          measures with us.
+          Stay ahead of the curve with our groundbreaking 8-step approach to cybersecurity. Our
+          advanced techniques and innovative solutions offer unmatched protection against emerging
+          threats and vulnerabilities. As the landscape evolves, we're revolutionizing security
+          measures to help you safeguard your assets like never before.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (

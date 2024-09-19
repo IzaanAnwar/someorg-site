@@ -1,25 +1,10 @@
 'use client';
-import { Shield, Hospital, Building, Briefcase, GraduationCap } from 'lucide-react';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CardContent, CardFooter, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs } from '../ui/tabs-animated';
 import Image from 'next/image';
 
-// Import or define the images for each sector
-const sectorImages = {
-  HealthcareCybersecurity:
-    'https://websec.nl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCybersecurity%20for%20Government.b985f4e1.png&w=640&q=85',
-  FinancialServicesSecurity:
-    'https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1726749734~exp=1726753334~hmac=e02003fec0cb126fd21ecf33a63962a6c9adaf43f51efebbd38f705c630d0b73&w=996',
-  GovernmentDefense:
-    'https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1726749734~exp=1726753334~hmac=e02003fec0cb126fd21ecf33a63962a6c9adaf43f51efebbd38f705c630d0b73&w=996',
-  CorporateNetworkSecurity:
-    'https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1726749734~exp=1726753334~hmac=e02003fec0cb126fd21ecf33a63962a6c9adaf43f51efebbd38f705c630d0b73&w=996',
-  EducationSectorProtection:
-    'https://img.freepik.com/free-photo/medical-banner-with-doctor-wearing-goggles_23-2149611193.jpg?t=st=1726749734~exp=1726753334~hmac=e02003fec0cb126fd21ecf33a63962a6c9adaf43f51efebbd38f705c630d0b73&w=996',
-};
 const sectors = [
   {
     title: 'Healthcare',
@@ -100,7 +85,13 @@ function Sectors() {
 
   return (
     <div className="h-screen px-4  [perspective:1000px] relative flex space-y-8 flex-col max-w-7xl mx-auto w-full items-start justify-start mt-20 ">
-      <h5 className="text-xl md:text-3xl font-bold text-center w-full">Sectors</h5>
+      <div className="space-y-2 mx-auto">
+        <h5 className="text-xl md:text-3xl font-bold text-center w-full">Sectors</h5>
+        <p className="text-gray-600 mb-12 max-w-5xl mx-auto text-center">
+          SomeOrg delivers tailored cybersecurity solutions for industries like finance, healthcare,
+          and more. We protect businesses with cutting-edge strategies against evolving threats.
+        </p>
+      </div>
       <Tabs tabs={tabs} />
     </div>
   );

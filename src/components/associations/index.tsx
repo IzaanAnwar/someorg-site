@@ -8,10 +8,10 @@ export default function Associations() {
         Our <strong className="text-primary">Associations</strong>
       </h1>
       <p className="text-gray-600 mb-12 max-w-5xl mx-auto text-center">
-        Experience unmatched security with our groundbreaking 8-step approach. Our advanced
-        techniques and innovative solutions provide unparalleled protection against emerging threats
-        and vulnerabilities, taking security to new heights. Revolutionize your security measures
-        with us.
+        We take pride in our strategic partnerships with industry leaders and innovators. Together,
+        we ensure that our solutions remain at the forefront of technology, delivering security,
+        reliability, and excellence. Our collaborations drive progress and empower us to offer you
+        cutting-edge protection and services.
       </p>
       <div className="flex justify-center items-center gap-12 mt-4">
         <motion.div

@@ -39,10 +39,9 @@ export default function FAQSection() {
         Frequently Asked <strong className="text-primary">Questions</strong>
       </h2>
       <p className="text-gray-600 mb-12 max-w-5xl mx-auto text-center">
-        Experience unmatched security with our groundbreaking 8-step approach. Our advanced
-        techniques and innovative solutions provide unparalleled protection against emerging threats
-        and vulnerabilities, taking security to new heights. Revolutionize your security measures
-        with us.
+        SomeOrg offers cutting-edge cybersecurity solutions with a unique 8-step approach, providing
+        unmatched protection against emerging threats. Discover answers to common questions about
+        how we can safeguard your business
       </p>
 
       <div className="flex flex-col lg:flex-row items-center justify-between ">
