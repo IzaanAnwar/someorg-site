@@ -1,0 +1,122 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { CheckCircle } from 'lucide-react';
+
+const serviceCards = [
+  {
+    title: 'Pentesting',
+    description:
+      'Pentesting services involve conducting simulated cyber attacks on a system or network to identify vulnerabilities and assess security measures, helping organizations strengthen their defenses against real-world threats.',
+    icon: '/services/pentesting.svg',
+    link: 'Learn about Pentesting',
+  },
+  {
+    title: 'Security Subscriptions',
+    description:
+      'Security subscriptions provide a range of packages that include both offensive and defensive security solutions ensuring comprehensive security at a fair price for companies of all sizes.',
+    icon: '/services/security.svg',
+    link: 'Learn about Security Subscriptions',
+  },
+  {
+    title: 'Security Staffing',
+    description:
+      'Staffing Services offer the perfect solution to augment your team with skilled security professionals, ensuring robust defense against cyber threats while enhancing operational efficiency.',
+    icon: '/retail.svg',
+    link: 'Learn about Security Staffing',
+  },
+];
+
+const otherServices = [
+  'Web Application VAPT',
+  'Infrastructure VAPT',
+  'Mobile App VAPT',
+  'Cloud Service VAPT',
+  'ICS/SCADA VAPT',
+  'IoT VAPT',
+  'WiFi VAPT',
+  'CoronaCheck VAPT',
+];
+
+export default function ServicesSection() {
+  return (
+    <div className="min-h-screen bg-gray-100 py-12 mt-64 md:mt-32 px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl mx-auto"
+      >
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">
+          Services provided by SomOrg
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {serviceCards.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="h-full flex flex-col">
+                <CardHeader>
+                  <motion.img
+                    src={service.icon}
+                    alt={service.title}
+                    className="w-16 h-16 mb-4"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  />
+                  <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <Button variant="link">{service.link} →</Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16"
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">Other Services by SomeOrg</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {otherServices.map((service, index) => (
+                  <motion.div
+                    key={service}
+                    className="flex items-center space-x-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                  >
+                    <CheckCircle className="text-primary" />
+                    <span>{service}</span>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div
+                className="mt-6 w-fit"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+              >
+                <Button className="bg-primary text-white hover:bg-primary/80">
+                  View All Services →
+                </Button>
+              </motion.div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}

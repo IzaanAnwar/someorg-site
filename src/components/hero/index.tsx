@@ -55,12 +55,18 @@ const HeroSection = () => {
               <ComputerProtectionIcon size={32} className="text-purple-400" />
             </motion.div>
           </div>
-          <Button
-            size="lg"
-            className="px-8 py-2 rounded-md  text-white font-bold transition duration-200 hover:bg-primary/10  border-2 border-transparent hover:border-primary "
+          <motion.div
+            className="mx-auto w-fit "
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
-            Secure Your Future
-          </Button>
+            <Button
+              size="lg"
+              className="px-8 py-2 rounded-md  text-white font-bold transition duration-200 hover:bg-primary/10  border-2 border-transparent hover:border-primary "
+            >
+              Secure Your Future
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </div>

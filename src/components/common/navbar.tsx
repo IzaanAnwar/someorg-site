@@ -16,6 +16,8 @@ import {
   UserCheck,
   FileCheck,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 type ServiceItem = {
   name: string;
@@ -147,9 +149,12 @@ const NavItem: React.FC<{ item: NavLink; isScrolled: boolean }> = ({ item, isScr
     >
       <a
         href={item.href}
-        className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${
-          isScrolled ? 'text-primary' : 'text-white'
-        }`}
+        className={cn(
+          'flex items-center px-3 py-2 rounded-md text-sm font-medium',
+          isScrolled ? 'text-primary hover:text-purple-600' : 'text-white hover:text-primary',
+          isOpen && 'text-purple-600',
+          !isScrolled && isOpen && 'text-primary'
+        )}
       >
         {item.name}
         {item.dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
@@ -194,10 +199,12 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="ml-2 text-xl font-bold text-primary">SOME-ORG</span>
-          </div>
+          <Link href={'/'} className="block">
+            <div className="flex items-center">
+              <Shield className="h-8 w-8 text-primary" />
+              <span className="ml-2 text-xl font-bold text-primary">SomOrg</span>
+            </div>
+          </Link>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((item) => (

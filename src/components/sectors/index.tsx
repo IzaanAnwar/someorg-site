@@ -79,14 +79,18 @@ function Sectors() {
               <h2 className="text-2xl md:text-4xl font-bold">{sector.title} Cyber Security</h2>
 
               <p className="text-lg font-medium leading-relaxed">{sector.description}</p>
-              <div className="mt-4">
+              <motion.div
+                className="mt-6 w-fit"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+              >
                 <Button
                   size={'lg'}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-md"
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-md"
                 >
                   {sector.cta}
                 </Button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -95,7 +99,7 @@ function Sectors() {
   );
 
   return (
-    <div className="h-screen px-4  [perspective:1000px] relative flex space-y-8 flex-col max-w-7xl mx-auto w-full items-start justify-start mt-20">
+    <div className="h-screen px-4  [perspective:1000px] relative flex space-y-8 flex-col max-w-7xl mx-auto w-full items-start justify-start mt-20 ">
       <h5 className="text-xl md:text-3xl font-bold text-center w-full">Sectors</h5>
       <Tabs tabs={tabs} />
     </div>
