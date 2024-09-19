@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { HeroTitle } from '../ui/hero-highlight';
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
@@ -64,7 +65,9 @@ const HeroSection = () => {
               size="lg"
               className="px-8 py-2 rounded-md  text-white font-bold transition duration-200 hover:bg-primary/10  border-2 border-transparent hover:border-primary "
             >
-              Secure Your Future
+              <Link href="#contact" className="w-full h-full">
+                Secure Your Future
+              </Link>
             </Button>
           </motion.div>
         </motion.div>

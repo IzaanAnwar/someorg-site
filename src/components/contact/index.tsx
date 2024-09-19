@@ -74,7 +74,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="max-w-7xl mx-auto py-12 px-4 mt-12">
+    <section className="max-w-7xl mx-auto py-12 px-4 mt-12" id="contact">
       <h2 className=" font-bold tracking-tighter text-4xl mb-2 text-center">Contact Us</h2>
       <p className="text-gray-500 text-center max-w-5xl mb-12 mx-auto">
         Get in touch with our cyber security experts. We're here to help protect your digital

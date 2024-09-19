@@ -12,7 +12,6 @@ import ServicesSection from '@/components/services';
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] bg-gray-100">
-      <Navbar />
       <HeroSection />
       <Sectors />
       <ServicesSection />
@@ -21,7 +20,6 @@ export default function Home() {
       <LatestBlogPosts />
       <FAQSection />
       <ContactSection />
-      <Footer />
     </div>
   );
 }

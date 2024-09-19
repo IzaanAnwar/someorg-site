@@ -3,19 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import {
-  Shield,
-  ChevronDown,
-  Users,
-  Briefcase,
-  Phone,
-  Lock,
-  Eye,
-  Code,
-  Cloud,
-  UserCheck,
-  FileCheck,
-} from 'lucide-react';
+import { Shield, ChevronDown, Users, Briefcase, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -40,13 +28,13 @@ const servicesData: ServiceCategory[] = [
   {
     category: 'PENETRATION TESTING',
     items: [
-      { name: 'Web Application Pentest', href: '#web-pentest' },
-      { name: 'Mobile Application Pentest', href: '#mobile-pentest' },
-      { name: 'Infrastructure Pentest', href: '#infrastructure-pentest' },
-      { name: 'ICS/SCADA Pentest', href: '#ics-scada-pentest' },
-      { name: 'Internet of Things Pentest', href: '#iot-pentest' },
-      { name: 'Wireless Networking Pentest', href: '#wireless-pentest' },
-      { name: 'Coronacheck App Pentest', href: '#coronacheck-pentest' },
+      { name: 'Web Application Pentest', href: '/services/web-app-pen-test' },
+      { name: 'Mobile Application Pentest', href: '/services/web-app-pen-test' },
+      { name: 'Infrastructure Pentest', href: '/services/web-app-pen-test' },
+      { name: 'ICS/SCADA Pentest', href: '/services/web-app-pen-test' },
+      { name: 'Internet of Things Pentest', href: '/services/web-app-pen-test' },
+      { name: 'Wireless Networking Pentest', href: '/services/web-app-pen-test' },
+      { name: 'Coronacheck App Pentest', href: '/services/web-app-pen-test' },
     ],
   },
   {
@@ -68,7 +56,7 @@ const servicesData: ServiceCategory[] = [
 ];
 
 const navLinks: NavLink[] = [
-  { name: 'Home', href: '#home' },
+  { name: 'Home', href: '/' },
   { name: 'Services', href: '#services', dropdown: servicesData },
   {
     name: 'Company',
@@ -220,7 +208,9 @@ const Navbar: React.FC = () => {
                   : 'bg-transparent border border-primary hover:bg-primary/30 text-white'
               }`}
             >
-              Get Started
+              <Link href="/#contact" className="w-full h-full">
+                Get Started
+              </Link>
             </Button>
           </div>
           <div className="md:hidden">
@@ -285,13 +275,15 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <Button
-            className={`w-full ${
+            className={`w-full z-50 ${
               scrolled
                 ? 'bg-primary hover:bg-primary/80 text-white'
                 : 'bg-white hover:bg-white/80 text-primary'
             }`}
           >
-            Get Started
+            <Link href="/#contact" className="w-full h-full">
+              Get Started
+            </Link>
           </Button>
         </div>
       </div>
