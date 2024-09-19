@@ -49,9 +49,14 @@ export default function ServicesSection() {
         transition={{ duration: 0.5 }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">
-          Services provided by SomOrg
+        <h1 className="text-4xl font-bold text-center  mb-2 text-gray-900">
+          <strong className="text-primary">Services</strong> provided by SomOrg
         </h1>
+        <p className="text-gray-600 mb-12 text-center max-w-5xl mx-auto">
+          Explore the range of tailored services offered by SomOrg, designed to secure your digital
+          landscape across industries. From healthcare to financial institutions, our expert
+          solutions ensure robust protection, seamless operation, and peace of mind.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceCards.map((service, index) => (
             <motion.div

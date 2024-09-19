@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CardContent, CardFooter, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Tabs } from '../ui/tabs';
+import { Tabs } from '../ui/tabs-animated';
 import Image from 'next/image';
 
 // Import or define the images for each sector

@@ -1,9 +1,8 @@
+import Approach from '@/components/approach';
 import Navbar from '@/components/common/navbar';
 import HeroSection from '@/components/hero';
 import Sectors from '@/components/sectors';
 import ServicesSection from '@/components/services';
-import { Tabs } from '@/components/ui/tabs';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -12,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <Sectors />
       <ServicesSection />
+      <Approach />
       <div className="h-screen" />
     </div>
   );
