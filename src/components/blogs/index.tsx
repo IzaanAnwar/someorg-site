@@ -55,11 +55,17 @@ export default function LatestBlogPosts() {
   }, []);
 
   return (
-    <section className="">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center text-primary">
-          Latest Insights in Cybersecurity
+    <section className="my-24">
+      <div className="max-w-7xl mx-auto px-4 ">
+        <h2 className="text-4xl font-bold mb-2  text-center ">
+          Latest Insights in <strong className="text-primary">Cybersecurity</strong>
         </h2>
+        <p className="text-gray-600 mb-12 max-w-5xl mx-auto text-center">
+          Experience unmatched security with our groundbreaking 8-step approach. Our advanced
+          techniques and innovative solutions provide unparalleled protection against emerging
+          threats and vulnerabilities, taking security to new heights. Revolutionize your security
+          measures with us.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
