@@ -1,4 +1,6 @@
 import Approach from '@/components/approach';
+import Associations from '@/components/associations';
+import LatestBlogPosts from '@/components/blogs';
 import Navbar from '@/components/common/navbar';
 import HeroSection from '@/components/hero';
 import Sectors from '@/components/sectors';
@@ -12,6 +14,8 @@ export default function Home() {
       <Sectors />
       <ServicesSection />
       <Approach />
+      <Associations />
+      <LatestBlogPosts />
       <div className="h-screen" />
     </div>
   );

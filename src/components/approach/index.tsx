@@ -134,17 +134,24 @@ export default function CuttingEdgeApproach() {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/4 space-y-2">
           {tabs.map((tab) => (
-            <button
+            <motion.div
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`w-full text-center hover:bg-primary/5 md:text-left py-2 px-4 rounded-lg transition-colors ${
-                activeTab === tab.id
-                  ? 'bg-primary/20 text-primary font-medium'
-                  : 'text-gray-600 hover:bg-gray-100'
-              }`}
+              className="w-full"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
-              {tab.label}
-            </button>
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`w-full text-center hover:bg-primary/5 md:text-left py-2 px-4 rounded-lg transition-colors ${
+                  activeTab === tab.id
+                    ? 'bg-primary/20 text-primary font-medium'
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                {tab.label}
+              </button>
+            </motion.div>
           ))}
         </div>
         <div className="w-full md:w-3/4 space-y-8">
