@@ -1,13 +1,38 @@
-import Approach from '@/components/approach';
-import Associations from '@/components/associations';
-import LatestBlogPosts from '@/components/blogs';
-import Navbar from '@/components/common/navbar';
-import ContactSection from '@/components/contact';
-import FAQSection from '@/components/faq';
-import Footer from '@/components/footer';
+import { PageLoadingSkeleton } from '@/components/common/page-loading';
 import HeroSection from '@/components/hero';
-import Sectors from '@/components/sectors';
-import ServicesSection from '@/components/services';
+import dynamic from 'next/dynamic';
+
+const ContactSection = dynamic(() => import('@/components/contact/index'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
+
+const Sectors = dynamic(() => import('@/components/sectors'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
+
+const Approach = dynamic(() => import('@/components/approach'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
+
+const Associations = dynamic(() => import('@/components/associations'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
+const LatestBlogPosts = dynamic(() => import('@/components/blogs'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
+const FAQSection = dynamic(() => import('@/components/faq'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
+const ServicesSection = dynamic(() => import('@/components/services'), {
+  ssr: false,
+  loading: () => <PageLoadingSkeleton />,
+});
 
 export default function Home() {
   return (
